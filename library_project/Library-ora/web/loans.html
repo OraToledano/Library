@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Loan or Return Item</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: #333;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            color: #007bff;
+        }
+        form {
+            max-width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"],
+        select {
+            width: calc(100% - 20px);
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h2>Loan or Return Item</h2>
+    <form action="loansServlet" method="post">
+        <label for="itemId">Item ID:</label>
+        <input type="text" id="itemId" name="itemId"><br><br>
+        
+        <label for="action">Choose Action:</label>
+        <select id="action" name="action">
+            <option value="loan">Loan</option>
+            <option value="return">Return</option>
+        </select><br><br>
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
+
